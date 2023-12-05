@@ -40,8 +40,8 @@ db.select("*")
     let p6 = problem6(db);
     let p7 = problem7(db);
     let p8 = problem8(db);
-    // let p9=problem9(db);
-    let promiseArray = [p1, p2, p3, p4, p5, p6, p7, p8];
+    let p9=problem9(db);
+    let promiseArray = [p1, p2, p3, p4, p5, p6, p7, p8,p9];
     return Promise.all(promiseArray);
   })
   .then((data) => {
