@@ -9,8 +9,8 @@ const problem4 = require("./myQueries/superOver.js");
 const problem5 = require("./myQueries/winTossWinMatch.js");
 const problem6 = require("./myQueries/highestDismissal.js");
 const problem7 = require("./myQueries/extraRunsConcede.js");
-const problem8 = require("./myQueries/matchesPerYear.js");
-const problem9 = require("./myQueries/matchesPerYear.js");
+const problem8 = require("./myQueries/economicalBowler.js");
+const problem9 = require("./myQueries/strikeRate.js");
 
 db.select("*")
   .from("information_schema.tables")
@@ -39,9 +39,9 @@ db.select("*")
     let p5 = problem5(db);
     let p6 = problem6(db);
     let p7 = problem7(db);
-    // let p8=problem8(db);
+    let p8 = problem8(db);
     // let p9=problem9(db);
-    let promiseArray = [p1, p2, p4, p5, p7];
+    let promiseArray = [p1, p2, p3, p4, p5, p6, p7, p8];
     return Promise.all(promiseArray);
   })
   .then((data) => {
